@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<! Páginadesenvolvidaem02/2022 !>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Desenvolvimento</title>
+<style>
+ body{
+	 background-attachment: fixed;
+	 background-size:80%;
+	 background-repeat:no-repeat;
+	 background-position:center;
+	 }
+	 
+</style>
+</head>
+<body background="proteção.jpg">
+<font face="arial black">
+<h2><p><b>Desenvolvimento</b></p></h2>
+O artigo tem como definição apresentar um comparativo entre processos BPMN no qual utilizaremos 
+como referência o processo com RPA e sem RPA, queservirá como comparativo entre os dois processos 
+e com esses resultados desses  elaboramos um protótipo abaixo, uma visão geral de como seria o 
+processo do início ao fim, pois a partir desta  visão macro teríamos base para extrair 2 processos 
+do BPMN e que possibilitasse  apresentar um comparativo. Nessa visão macro idealizamos como o 
+protótipo deveria funcionar no auxílio da vítima.
+<br>
+A seguir uma visão geral do macroprocessodo BPMN:
+<br>
+<h3><b>Figura 1. Macroprocesso visão do sistema SPDM como um todo.</b></h3>
+<br>
+<img src="imagem 1.JPG">
+<br>
+Após reuniões em grupocomeçamos a elaborar um protótipo onde a ideia seria o usuário realizar um 
+cadastro de informações que estaria sendo armazenado em dois sistemas o primeiro seria na base do 
+protótipo e segundo ficaria na base da polícia militar onde após o cadastro iria ser acionado através 
+de um comando cadastrado pela vítima (conforme figura acima) em seguida o sistema iniciaria a coleta 
+de gravação de voz e a geolocalização da vítima, com essas informações e com base no cadastro inicial 
+da vítima saberíamos onde a ocorrência estaria acontecendo (residência ou em algum ponto da cidade), 
+com essas informações enviadas a polícia militar o sistema da políciadeslocaria umapara prestar 
+socorro à vítima, aumentando à possibilidade de socorro às vítimas deagressões sexuais com isso 
+salvando avida de muitas mulheres. De acordo (DREZETT et al, 1998) acredita-se que a maior parte das 
+mulheres não registre queixa por constrangimento e humilhação, ou por medo da reação do parceiro, 
+familiares, amigos, vizinhos e autoridades. Também é comum que no agressor ameace a mulher, caso 
+revele-se o ocorrido.
+<br>
+<br>
+<b>Elaboração do BPMN do diagrama do acionamento sem RPA.</b>
+<br>
+<br>
+<h3><b>Figura 2. Fluxo de acionamento sem RPA</b></h3>
+<br>
+<img src="imagem 2.JPG">
+<br>
+Na figura 2, extraímos o processo de cadastro dos meios de acionamento de forma manual (sem RPA)
+Podemos observar no diagrama da figura 2 que o processo é iniciado conforme o sub processoque está 
+localizado na “raia usuário” cadastro das atividades que são: palavra-chave, digital, facial e o 
+código de acesso e após esse passo estarão sendo armazenados em uma base de dados do sistema que 
+está localizada na “raia sistema” que poderá ser consultado em caso de acionamento do próprio usuário 
+“na raia usuário”, e após esse acionamento enviara todas as informações para o sistema “na raia 
+sistema” que através do processo de inicialização enviará as informações para o sistema da polícia 
+militar “na raia sistema da polícia militar” que prestará o socorro, finalizando o todo o processo.
+<br>
+<br>
+Na figura 2, extraímos o processo de cadastro dos meios de acionamento de forma automatizada (com RPA)
+Podemos observar no diagrama da figura 3 que o processo é iniciado conforme o sub processo que está 
+localizado na “raia usuário” cadastro das atividades em que o usuário cadastra os meios de acionamento 
+de forma automatizada, em seguida todos os dados são armazenados em uma base de dados do sistema “na 
+raia sistema”, através de um processo de decisão o sistema detectara se houve acionamento e enquanto 
+não for identificado esse evento o sistema não é acionado ocorrendo uma rotina de verificação  na 
+raia sistema” até o momento em que o for identificada o evento em seguida “na raiz sistema” o sistema 
+irá coletar e enviará através de processo “na raia sistema” todas as informações para o sistema da 
+polícia militar “raia sistema da políciamilitar “onde iniciará o processo e prestará o socorro à 
+vítima finalizando o  fluxo.
+<br>
+<br>
+<h3><b>Figura 3. Fluxo de acionamento com RPA</b></h3>
+<br>
+<img src="imagem 3.JPG">
+<br>
+<br>
+Na figura 4 extraímos o processo de coleta de dados de forma manual.
+Podemos observar no diagrama da figura 4 que o processo só será é iniciado após o usuário abrir o 
+aplicativo “na raia usuário”, após a ação do usuárioo sistema através do processo irá coletar os 
+dados de geolocalizaçãoe iniciara a gravação de voz e vídeo “na raia sistema” em seguida o sistema 
+tomará uma decisão de analisar através da geolocalização “na raia sistema” onde está ocorrendo o 
+evento, se for na residência da vítima o sistema enviará através do processo “na raia sistema”  
+todas as informações para a polícia militar “na raia sistema da políciamilitar “que iniciará o 
+atendimento e prestara o socorro finalizando o fluxo, o sistema também enviara através do processo 
+um SMS( mensagem de texto para celular) para um contato que a vítima cadastrou no início do processo 
+e este contato “na raia Terceiro” entrará em contato com a polícia militar e informara o ocorrido, a 
+polícia iniciará o atendimento e prestará o socorro a vítima finalizando o fluxo. No caso de o 
+sistema detectar que a violência está ocorrendo em qualquer outro lugar, através de um processo “na 
+raia sistema” enviará todas as informações para apolícia militar “na raia sistema da polícia militar” 
+que prestará o atendimento finalizando o fluxo.
+<br>
+<br>
+<h3><b>Figura 4. Fluxo de coleta de dados sem RPA</b></h3>
+<br>
+<img src="imagem 4.JPG">
+<br>
+<br>
+Na figura 5 extraímos o processo de coleta de dados com a implantação do RPA
+Podemos observar no diagrama da figura 5 que o processo é iniciado de forma automatizada, onde o 
+aplicativo só será iniciado quando o sistema detectar o acionamento “na raia sistema”. Uma vez 
+iniciado, o processo de captura coleta as informações de geolocalização, voz e vídeo “na raia 
+sistema” em seguida o sistema somente irá prosseguir se não houver falha no envio dos dados “na raia 
+sistema”, no caso dos dados serem enviados com sucesso o sistema consultara a base de dados “na raia 
+sistema” identificando onde ocorre o evento, se for à residência da vítima o sistema enviará através 
+do processo “na raia sistema” todas as informações para a polícia militar “na raia sistema da polícia 
+militar” que iniciará o atendimento e prestara o socorro finalizando o fluxo, o sistema verificara  
+também na base de dados um contato cadastrado e através do processo “na raia sistema” e enviará um 
+SMS (mensagem de texto para celular)  para um outro contato e este contato também acionará a polícia 
+militar “na raia sistema da polícia militar” e informara o ocorrido, a polícia iniciará o atendimento 
+prestando o socorro à vítima finalizando o fluxo. No caso de o sistema detectar que a violência está 
+ocorrendo em qualquer outro lugar, através de um processo “na raia sistema” enviará todas as 
+informações para a polícia militar “na raia sistema da polícia militar” que prestara o atendimento 
+finalizando o fluxo.
+<br>
+<br>
+<h3><b>Figura 5. Fluxo de coleta de dados com RPA</b></h3>
+<br>
+<img src="imagem 5.JPG">
+<br>
+
+
+<a href="Projeto Integrador SPDM.html"><h3><img width="30px" src="unnamed.png"></a>Página ínicial</H3>
+
+</body>
+</html>
